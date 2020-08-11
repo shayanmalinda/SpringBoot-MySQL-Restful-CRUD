@@ -28,6 +28,7 @@ public class UserController {
 	@GetMapping
 	public List<User> getAllUsers() {
 		return this.userRepository.findAll();
+				
 	}
 	
 	// get user by id
@@ -41,7 +42,7 @@ public class UserController {
 	@PostMapping
 	public User createUser(@RequestBody User user) {
 		return this.userRepository.save(user);
-	}
+	} 
 	
 	//update user
 	@PutMapping("/{id}")
